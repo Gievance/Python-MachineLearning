@@ -87,7 +87,7 @@ ps:用conda安装：conda install -c conda-forge pycocotools
 
 >参考PytorchImple/DataTest/COCOTest.py
 
-![img.png](Images/img.png)
+![img.png](Images/img_coco_bbox.png)
 可见关键是`bbox`
 
 
