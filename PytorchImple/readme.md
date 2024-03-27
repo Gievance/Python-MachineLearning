@@ -18,11 +18,11 @@
 # 模型结构图
 ## DenseNet
 设计理念：[DenseNet：比ResNet更优的CNN模型](https://zhuanlan.zhihu.com/p/37189203)
-1. DenseBlock层
+### 1. DenseBlock层
 ![img_2.png](Images/img_2.png)
-2. Transition层
+### 2. Transition层
 ![img_3.png](Images/img_3.png)
-3. DenseNet
+### 3. DenseNet
 ![img_4.png](Images/img_4.png)
 
 
