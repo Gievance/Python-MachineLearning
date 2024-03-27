@@ -33,7 +33,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # 5. 训练模型
-epochs = 4
+epochs = 120
 model.train()
 for epoch in range(epochs):
     running_loss = 0.0
@@ -51,11 +51,11 @@ for epoch in range(epochs):
         running_loss += loss.item()
         progress_bar.set_postfix({'Training Loss': running_loss / len(train_loader)})  # 更新进度条显示的训练损失
 # 6. 保存模型
-torch.save(model.state_dict(), 'Weights/densenet_cifar10.pth')
+torch.save(model.state_dict(), 'Weights/resnet_cifar10.pth')
 
 # 7. 加载训练好的模型进行推理
 model = ResNet(block=BottleNeck,layer=layer).to(device)
-model.load_state_dict(torch.load('Weights/densenet_cifar10.pth'))
+model.load_state_dict(torch.load('Weights/resnet_cifar10.pth'))
 
 # 8. 模型评估
 model.eval()
